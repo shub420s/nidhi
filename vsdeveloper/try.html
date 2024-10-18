@@ -1,0 +1,149 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Ways - Haryana Roadways</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        nav {
+            margin: 20px 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: #4CAF50;
+        }
+        
+        main {
+            margin-top: 20px;
+        }
+        
+        section {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #45a049;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        #route-map {
+            height: 300px;
+            width: 100%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HR Ways</h1>
+        <p>Your reliable Haryana Roadways app</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#bus-info">Bus Information</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#route-planning">Route Planning</a></li>
+            <li><a href="#buy-ticket">Buy Ticket</a></li>
+            <li><a href="#service-alert">Service Alert</a></li>
+            <li><a href="#real-time-tracking">Real Time Tracking</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="home">
+            <h2>Welcome to HR Ways</h2>
+            <p>Find your bus schedules and routes easily!</p>
+        </section>
+        <section id="bus-info">
+            <h2>Bus Information</h2>
+            <ul id="bus-list">
+                <!-- Bus information will be dynamically populated here -->
+            </ul>
+            <button id="load-bus-info">Load Bus Information</button>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: support@hrways.com</p>
+        </section>
+        <section id="route-planning">
+            <h2>Route Planning</h2>
+            <form id="route-form">
+                <label for="start-point">Start Point:</label>
+                <input type="text" id="start-point" name="start-point">
+                <label for="end-point">End Point:</label>
+                <input type="text" id="end-point" name="end-point">
+                <button id="plan-route">Plan Route</button>
+            </form>
+            <div id="route-map"></div>
+        </section>
+        <section id="buy-ticket">
+            <h2>Buy Ticket</h2>
+            <form id="ticket-form">
+                <label for="route-select">Select Route:</label>
+                <select id="route-select" name="route-select">
+                    <!-- Route options will be dynamically populated here -->
+                </select>
+                <label for="ticket-quantity">Ticket Quantity:</label>
+                <input type="number" id="ticket-quantity" name="ticket-quantity">
+                <button id="buy-ticket-btn">Buy Ticket</button>
+            </form>
+        </section>
+        <section id="service-alert">
+            <h2>Service Alert</h2>
+            <p id="service-alert-message"></p>
+        </section>
+        <section id="real-time-tracking">
+            <h2>Real Time Tracking</h2>
+            <div id="real-time-map"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 HR Ways. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
